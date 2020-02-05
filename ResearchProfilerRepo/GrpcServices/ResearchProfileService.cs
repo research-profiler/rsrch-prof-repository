@@ -17,7 +17,7 @@ namespace ResearchProfilerRepo
             _logger = loggerFactory.CreateLogger<ResearchProfileService>();
         }
 
-        public override Task<ResearcherListReply> GetAllResearchers(GetAllResearcherRequest request, 
+        public override Task<ResearcherListReply> GetAllResearcherInformation(GetAllResearcherRequest request, 
             ServerCallContext context)
         {
             return null;

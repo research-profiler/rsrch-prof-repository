@@ -7,8 +7,79 @@ package researcher;
 import "google/protobuf/empty.proto";
 
 service ResearcherService {
-  rpc GetAllResearchers (GetAllResearcherRequest) returns (ResearcherListReply);
+  rpc GetAllResearcherInformation (GetAllResearcherRequest) returns (ResearcherListReply);
   rpc GetResearcherById (ResearcherByIdRequest) returns (ResearcherReply);
+  rpc GetLatestMeasureForResearcher (GetLatestMeasureForResearcherRequest) returns (GetLatestMeasureForResearcherReply);
+  rpc GetAllMeasuresForResearcher (GetAllMeasuresForResearcherRequest) returns (GetAllMeasuresForResearcherReply);
+  rpc GetGlobalStatsForLastRefresh (GetGlobalStatsForLastRefreshRequest) returns (GetGlobalStatsForLastRefreshResponse);
+}
+
+message GlobalMeasure {
+    string bucket_name = 1;
+    string date_measured = 2;
+    double median = 3;
+    double mean = 4;
+    double standardDeviation = 5;
+    int32 range = 6;
+}
+message Measure {
+    string bucket_name = 1;
+    string threshold_name = 2;
+    string date_measured = 3;
+    string value = 4;
+    string job_title_at_date = 5;
+}
+
+
+message ResearcherInformation {
+    string ucid = 1;
+    string first = 2;
+    string last = 3;
+    string email = 4;
+    string department = 5;
+    string college = 6;
+    
+}
+
+message Researcher {
+    string ucid = 1;
+    string first = 2;
+    string last = 3;
+    string email = 4;
+    string department = 5;
+    string college = 6;
+    repeated Measure lastMeasuredData= 7; // collection of the most recent data for measures
+}
+
+message GetLatestMeasureForResearcherReply {
+    repeated Measure latest_measures = 1;
+}
+
+message GetGlobalStatsForLastRefreshRequest {
+    oneof requested_researcher {
+        string ucid = 1;
+        Researcher researcher = 2;
+    }
+}
+message GetGlobalStatsForLastRefreshResponse {
+    GlobalMeasure last_measure = 1;
+}
+
+message GetLatestMeasureForResearcherRequest {
+    oneof requested_researcher {
+        string ucid = 1;
+        Researcher researcher = 2;
+    }
+}
+message GetAllMeasuresForResearcherRequest {
+    oneof requested_researcher {
+        string ucid = 1;
+        Researcher researcher = 2;
+    }
+}
+
+message GetAllMeasuresForResearcherReply {
+    repeated Measure measures = 1;
 }
 
 message GetAllResearcherRequest {
@@ -19,27 +90,11 @@ message ResearcherByIdRequest {
     string ucIdNumber = 1;
 }
 
-message Measure {
-    string bucket_name = 1
-    string threshold_name = 2
-    string date_measured = 3;
-    string value = 4;
-    string job_title_at_date = 5;
-}
-
 message ResearcherReply {
     Researcher researcher = 1;
 }
 
-message Researcher {
-    string ucid = 1;
-    string first = 2;
-    string last = 3;
-    string email = 4;
-    string department = 5;
-    string college = 6;
+message ResearcherListReply {
+    repeated ResearcherInformation researchers = 1;
 }
 
-message ResearcherListReply {
-    repeated Researcher researchers = 1;
-}
