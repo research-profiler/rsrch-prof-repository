@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ResearchProfilerRepo.Database
+namespace ResearcherProfilerREST.Database
 {
     public partial class Person
     {
@@ -10,10 +10,10 @@ namespace ResearchProfilerRepo.Database
             Measure = new HashSet<Measure>();
         }
 
-        public string Ucid { get; set; }
+        public string Mnumber { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
         public string Email { get; set; }
-        public string First { get; set; }
-        public string Last { get; set; }
         public string Department { get; set; }
 
         public virtual ICollection<Measure> Measure { get; set; }

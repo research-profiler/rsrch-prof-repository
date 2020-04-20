@@ -1,0 +1,102 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+code {
+    color: black;
+    padding: -1px;
+    background-color: white;
+}
+
+.json {
+    background-color: white;
+    padding: 0 2%;
+    margin: 2%;
+}
+.json > code {
+    white-space: pre-wrap;
+}
+h1, h2, h3, h4 {
+    text-align: center;
+}
+#endpoints h2, h3, h4 {
+    text-align: left;
+}
+h3,h4 {
+    margin-top:30px;
+}
+.endpoint-metadata {
+    padding-left: 5%;
+    color: #313539;
+    font-size: .9rem;
+}
+.endpoint-metadata > p {
+    margin-bottom:0;
+}
+.endpoint-list {
+    list-style: none;
+}
+.endpoint-list > li {
+    background-color:#e5e5e5;
+    padding: 1% 4% 1% 4%;
+    margin: 1%;
+}
+.no-right-pad {
+    padding-right: 0 !important;
+}
+.main-content {
+    padding: 0 20%;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  line-height: 60px; /* Vertically center the text there */
+}

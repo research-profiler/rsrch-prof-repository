@@ -1,0 +1,96 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+    <div class="main-content">
+        <h1 class="display-4">Researcher Profiler</h1>
+        <div id="abstract">
+            <h2>Abstract</h2>
+            <p>
+                Provide a proof of concept application to dynamically categorize researchers into various research strengths (identified by research office).
+                This would facilitate office of research staff to provide more personalized assistance to UC researchers in areas such as: identifying relevant
+                funding opportunities, assisting in securing funding and funding/compliance related training.
+            </p>
+        </div>
+
+        <div id="our-team">
+            <h2>Our Team</h2>
+            <ul>
+                <li><span class="our-team-name">Andrew Aldrich</span> <span class="our-team-role">Computer Science</span></li>
+                <li><span class="our-team-name">Ryan Karasch</span> <span class="our-team-role">Computer Science</span></li>
+                <li><span class="our-team-name">Caden Lawrence</span> <span class="our-team-role">Computer Science</span></li>
+                <li><span class="our-team-name">Ketaki Mhaisekar</span> <span class="our-team-role">Advisor</span></li>
+            </ul>
+        </div>
+
+        <div id="links">
+            <h2>Links</h2>
+            <div id="demo-links">
+                <h3>Demo Links</h3>
+                <p class="warning">
+                    Please note that all data being presented is test data due to a request from the Office of Research and our Advisor.
+                </p>
+                <ul>
+                    <li><a href="./api-help">API Documentation</a></li>
+                    <li><a href="">Notifier</a>: sets up alerts to detect changes in statuses to notify users</li>
+                    <li><a href="">Viewer</a>: allows the user to view statistics for individual researchers</li>
+
+                </ul>
+            </div>
+            <div id="project-links">
+                <h3>Project Links</h3>
+                <div>
+                    <h4>General</h4>
+                    <ul>
+                        <li>
+                            <a href="https://dev.azure.com/aa-cl-rk-senior-design/researcher-profiler/_wiki/wikis/researcher-profiler.wiki/18/Fall-Report">
+                                Fall Report
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/watch?v=Zk5OGZkQMuM">
+                                Fall Presentation
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://dev.azure.com/aa-cl-rk-senior-design/_git/researcher-profiler?path=%2FPoster.png&version=GBmaster">
+                                Poster
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://dev.azure.com/aa-cl-rk-senior-design/researcher-profiler/_wiki/wikis/researcher-profiler.wiki/5/Index">
+                                Repository
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Source Code</h4>
+                    <ul>
+                        <li>
+                            <a href="https://github.com/research-profiler/rsrch-prof-repository">
+                                Researcher Profiler Repository/Api
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/research-profiler/rsrch-profiler-visualizer">
+                                Researcher Profiler Visualizer
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/research-profiler/rsrch-prof-notifier">
+                                Researcher Profiler Notifier
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+
+            </div>
+        </div>
+
+
+    </div>

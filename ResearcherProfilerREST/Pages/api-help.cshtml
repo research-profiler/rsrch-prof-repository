@@ -1,0 +1,155 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+    <div class="main-content no-right-pad">
+        <div id="endpoints">
+            <h1>Endpoints</h1>
+            <ul class="endpoint-list">
+                <li>
+                    <h3>Endpoint Name</h3>
+                    <div class="endpoint-metadata">
+                        <p><strong>Url</strong>: </p>
+                        <p><strong>Methods</strong>: </p>
+                        <p><strong>Query Parameters</strong>: </p>
+                    </div>
+                    <div>
+                        <h4>Description</h4>
+                        <p>foobar</p>
+                        <h4>Response</h4>
+                        <p>bar</p>
+                        <div class="json">
+                            <code>
+                                bar
+                                foo
+                            </code>
+                        </div>
+                    </div>
+
+                </li>
+
+                <li>
+                    <h3>Researcher</h3>
+                    <div class="endpoint-metadata">
+                        <p><strong>Url</strong>: /researcher/<em>mnumber</em></p>
+                        <p><strong>Methods</strong>: GET</p>
+                        <p><strong>Query Parameters</strong>: None</p>
+                    </div>
+                    <div>
+                        <h4>Description</h4>
+                        <p>Returns an individual researcher</p>
+                        <h4>Sample Response</h4>
+
+                        <div class="json">
+                            <code>
+    {
+	    "mnumber": "M12345678",
+	    "firstName": "Jon",
+	    "lastName": "Snoe",
+	    "email": "snoej@ucmail.uc.edu",
+	    "deparment": "Engineering",
+	    LastMeasures: [
+		    {
+			    "id": "1a5fdbaa-c645-4c74-be09-f75377ece388",
+			    "dateMeasured": "2020-01-23",
+			    "value": "28",
+			    "globalMean": 103.5,
+			    "globalMedian": 103.5,
+			    "globalMin": 98,
+			    "globalMax": 109,
+			    "globalStdDev": 7.77817459305202,
+			    "aggregateId":"d18d456b-6860-475e-96cd-6965d0747855",
+			    "aggregateName": "My_Agg",
+			    "aggregateType": "SUM",
+			    "thresholdId": "a18d456b-6860-475e-96cd-6965d0747857",
+			    "thresholdName": "Troll"
+		    },
+		    {
+			    "id": "41aac5cc-5714-44e5-ad04-1afb5481faa1",
+			    "dateMeasured": "2020-01-23",
+			    "value": "17",
+			    "globalMean": 121.5,
+			    "globalMedian": 121.5,
+			    "globalMin": 111,
+			    "globalMax": 132,
+			    "globalStdDev": 14.8492424049175,
+			    "aggregateId":"d18d456b-6860-475e-96cd-6965d0747856",
+			    "aggregateName": "My_Agg",
+			    "aggregateType": "SUM",
+			    "thresholdId": "b18d456b-6860-475e-96cd-6965d0747857",
+			    "thresholdName": "Troll"
+		    }
+	    ]
+    }
+                            </code>
+                        </div>
+                    </div>
+
+                </li>
+                <li>
+                    <h3>Endpoint Name</h3>
+                    <div class="endpoint-metadata">
+                        <p><strong>Url</strong>: </p>
+                        <p><strong>Methods</strong>: </p>
+                        <p><strong>Query Parameters</strong>: </p>
+                    </div>
+                    <div>
+                        <h4>Description</h4>
+                        <p>foobar</p>
+                        <h4>Response</h4>
+                        <p>bar</p>
+                        <div class="json">
+                            <code>
+                                bar
+                                foo
+                            </code>
+                        </div>
+                    </div>
+
+                </li>
+                <li>
+                    <h3>Endpoint Name</h3>
+                    <div class="endpoint-metadata">
+                        <p><strong>Url</strong>: </p>
+                        <p><strong>Methods</strong>: </p>
+                        <p><strong>Query Parameters</strong>: </p>
+                    </div>
+                    <div>
+                        <h4>Description</h4>
+                        <p>foobar</p>
+                        <h4>Response</h4>
+                        <p>bar</p>
+                        <div class="json">
+                            <code>
+                                bar
+                                foo
+                            </code>
+                        </div>
+                    </div>
+
+                </li>
+                <li>
+                    <h3>Endpoint Name</h3>
+                    <div class="endpoint-metadata">
+                        <p><strong>Url</strong>: </p>
+                        <p><strong>Methods</strong>: </p>
+                        <p><strong>Query Parameters</strong>: </p>
+                    </div>
+                    <div>
+                        <h4>Description</h4>
+                        <p>foobar</p>
+                        <h4>Response</h4>
+                        <p>bar</p>
+                        <div class="json">
+                            <code>
+                                bar
+                                foo
+                            </code>
+                        </div>
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+    </div>

@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option csharp_namespace = "ResearchProfilerRepo";
+option csharp_namespace = "ResearchProfilerRepo.GRPC";
 
 package researcher;
 

@@ -1,14 +1,14 @@
-INSERT INTO Person (mnumber, firstname, lastname, email, department)
+INSERT INTO Person (mnumber, first_name, last_name, email, department)
 VALUES ('M12345678', 'Jon', 'Snoe', 'snoej@ucmail.uc.edu', 'Engineering'),
     ('M12345679', 'Bill', 'Weasley', 'weasleb@ucmail.uc.edu', 'Zoology');
 
-INSERT INTO aggregation(id, name, type, parentname)
+INSERT INTO aggregation(id, name, type, parent_name)
 VALUES ('d18d456b-6860-475e-96cd-6965d0747855', 'My_Agg', 'SUM', NULL),
     ('d18d456b-6860-475e-96cd-6965d0747856', 'My_Agg_2', 'AVG', NULL),
     ('d18d456b-6860-475e-96cd-6965d0747857', 'My_Child_Agg', 'SUM', 'd18d456b-6860-475e-96cd-6965d0747855');
 
 -- Insert Thresholds for My_Agg
-INSERT INTO public.threshold(id, threshold_start, threshold_end, thresholdname, aggregation)
+INSERT INTO public.threshold(id, threshold_start, threshold_end, threshold_name, aggregation)
 VALUES ('a18d456b-6860-475e-96cd-6965d0747857', 0, 25, 'Troll', 'd18d456b-6860-475e-96cd-6965d0747855'),
     ('a18d456b-6860-475e-96cd-6965d0747858', 25, 50, 'Dreadful', 'd18d456b-6860-475e-96cd-6965d0747855'),
     ('a18d456b-6860-475e-96cd-6965d0747859', 50, 75, 'Poor', 'd18d456b-6860-475e-96cd-6965d0747855'),
@@ -17,7 +17,7 @@ VALUES ('a18d456b-6860-475e-96cd-6965d0747857', 0, 25, 'Troll', 'd18d456b-6860-4
     ('a18d456b-6860-475e-96cd-6965d0747852', 150, 200, 'Outstanding', 'd18d456b-6860-475e-96cd-6965d0747855');
 
 -- Insert Thresholds for My_Child_Agg
-INSERT INTO public.threshold(id, threshold_start, threshold_end, thresholdname, aggregation)
+INSERT INTO public.threshold(id, threshold_start, threshold_end, threshold_name, aggregation)
 VALUES ('b18d456b-6860-475e-96cd-6965d0747857', 0, 25, 'Troll', 'd18d456b-6860-475e-96cd-6965d0747856'),
     ('b18d456b-6860-475e-96cd-6965d0747858', 25, 50, 'Dreadful', 'd18d456b-6860-475e-96cd-6965d0747856'),
     ('b18d456b-6860-475e-96cd-6965d0747859', 50, 75, 'Poor', 'd18d456b-6860-475e-96cd-6965d0747856'),
@@ -26,7 +26,7 @@ VALUES ('b18d456b-6860-475e-96cd-6965d0747857', 0, 25, 'Troll', 'd18d456b-6860-4
     ('b18d456b-6860-475e-96cd-6965d0747852', 150, 200, 'Outstanding', 'd18d456b-6860-475e-96cd-6965d0747856');
 
 -- Insert Thresholds for My_Agg_2
-INSERT INTO public.threshold(id, threshold_start, threshold_end, thresholdname, aggregation)
+INSERT INTO public.threshold(id, threshold_start, threshold_end, threshold_name, aggregation)
 VALUES ('c18d456b-6860-475e-96cd-6965d0747857', 0, 25, 'Troll', 'd18d456b-6860-475e-96cd-6965d0747857'),
     ('c18d456b-6860-475e-96cd-6965d0747859', 50, 75, 'Poor', 'd18d456b-6860-475e-96cd-6965d0747857'),
     ('c18d456b-6860-475e-96cd-6965d0747850', 100, 125, 'Acceptable', 'd18d456b-6860-475e-96cd-6965d0747857'),
@@ -34,7 +34,7 @@ VALUES ('c18d456b-6860-475e-96cd-6965d0747857', 0, 25, 'Troll', 'd18d456b-6860-4
     ('c18d456b-6860-475e-96cd-6965d0747858', 25, 50, 'Dreadful', 'd18d456b-6860-475e-96cd-6965d0747857'),
     ('c18d456b-6860-475e-96cd-6965d0747852', 150, 200, 'Outstanding', 'd18d456b-6860-475e-96cd-6965d0747857');
 
-INSERT INTO public.measure(id, datemeasured, personmeasured, aggregatemeasured, value)
+INSERT INTO public.measure(id, date_measured, person_measured, aggregate_measured, value)
 VALUES 
     ('0c7b8a3d-ec91-4542-b775-36166db120fc','2020-01-01','M12345678','d18d456b-6860-475e-96cd-6965d0747855',8),
     ('f748e39d-f501-4d8d-94ae-f96764431201','2020-01-01','M12345678','d18d456b-6860-475e-96cd-6965d0747856',105),
@@ -59,7 +59,7 @@ VALUES
     ('c9b41f66-d5ee-4b53-b970-5cfef0b6b071','2020-01-30','M12345679','d18d456b-6860-475e-96cd-6965d0747856',132),
     ('c03b20da-de7d-4477-ada7-12558916cb51','2020-01-30','M12345679','d18d456b-6860-475e-96cd-6965d0747857',196);
 
-INSERT INTO public.globalmeasure(id, datemeasured, aggregateid, mean, median, minimumvalue, maximumvalue, standarddeviation)
+INSERT INTO public.global_measure(id, date_measured, aggregate_id, mean, median, minimum_value, maximum_value, standard_deviation)
 VALUES
 ('cc9f05bc-3b8a-477e-9443-64d7319b4547','2020-01-01','d18d456b-6860-475e-96cd-6965d0747855',73.5,105,8,139,67.9779375974294),
 ('c30144b8-849c-4eb1-bc9d-ca797d1d8961','2020-01-08','d18d456b-6860-475e-96cd-6965d0747855',110,110,110,110,0),
