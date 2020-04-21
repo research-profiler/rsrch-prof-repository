@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ResearcherProfilerREST.Database;
@@ -14,7 +13,7 @@ namespace ResearcherProfilerREST.Controllers
     public class ApiController : ControllerBase
     {
         // GET: Api/5
-        [EnableCors]
+
         [HttpGet("researcher/{mnumber}", Name = "GetResearcher")]
         public JsonResult GetResearcher(string mnumber)
         {
@@ -23,7 +22,6 @@ namespace ResearcherProfilerREST.Controllers
             return new JsonResult(response);
         }
 
-        [EnableCors]
         [HttpGet("aggregation/{aggregationId}/threshold", Name = "GetThresholds")]
         public JsonResult GetThresholds(string aggregationId)
         {
@@ -33,7 +31,6 @@ namespace ResearcherProfilerREST.Controllers
             return new JsonResult(response);
         }
 
-        [EnableCors]
         [HttpGet("researcher", Name = "GetResearchers")]
         public JsonResult GetResearchers()
         {
@@ -44,7 +41,6 @@ namespace ResearcherProfilerREST.Controllers
             return new JsonResult(response);
         }
 
-        [EnableCors]
         [HttpGet("latest", Name = "GetLatest")]
         public JsonResult GetLatest()
         {
