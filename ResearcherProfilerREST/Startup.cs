@@ -28,10 +28,10 @@ namespace ResearcherProfilerREST
         {
             services.AddCors(options =>
             {
-                options.AddDefaultPolicy(
+                options.AddPolicy(name: MyAllowSpecificOrigins,
                     builder =>
                     {
-                        builder.AllowAnyOrigin();
+                        builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
                     });
             });
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
