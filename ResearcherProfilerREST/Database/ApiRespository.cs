@@ -35,9 +35,9 @@ namespace ResearcherProfilerREST.Database
                     LatestMeasureItem latestMeasure = new LatestMeasureItem
                     {
                         Id = measure.Id.ToString(),
-                        PersonId = "person.Mnumber",
-                        FirstName = "person.FirstName",
-                        LastName = "person.LastName",
+                        PersonId = person.Mnumber,
+                        FirstName = person.FirstName,
+                        LastName = person.LastName,
                         ThresholdId = threshold.Id.ToString(),
                         ThresholdName = threshold.ThresholdName,
                         Value = measure.Value + random.Next(-5000, 5000)
@@ -172,10 +172,10 @@ namespace ResearcherProfilerREST.Database
 
         private bool MatchPersonQuery(Person person, string query)
         {
-            query = query.ToLower();
             bool result = true;
             if (!string.IsNullOrEmpty(query))
             {
+                query = query.ToLower();
                 bool firstNameMatch = person.FirstName.ToLower().Contains(query);
                 bool lastNameMatch = person.LastName.ToLower().Contains(query);
                 bool departmentMatch = person.Department.ToLower().Contains(query);

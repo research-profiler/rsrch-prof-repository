@@ -2,7 +2,7 @@ import os
 import aggregate
 
 TEST_FILE_PATH = '../data/testdata.csv'
-USE_TEST_FILE = False
+USE_TEST_FILE = True
 
 def main():
     csv_file_path = TEST_FILE_PATH
